@@ -1,0 +1,30 @@
+﻿<div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="txtBox">Enter a number:</label>
+                <input type="text" class="form-control" ng-model="num" id="txtBox">
+            </div>
+            <div class="col-md-4">
+                <label for="txtBox" ng-show="show">{{result}}</label>
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-primary" ng-click="clear()">Refresh</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <button type="button" class="btn btn-primary" ng-click="generatePrevious()">Previous</button>
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-primary" ng-click="checkPrime()">Check</button>
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-primary" ng-click="generateNext()">Next</button>
+            </div>
+        </div>
+    </div>
+</div>
