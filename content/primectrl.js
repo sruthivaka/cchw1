@@ -20,7 +20,7 @@
             $scope.result = "";
             $scope.show = true;
 
-            if (!isNaN(num) && angular.isNumber(+num))
+            if (isTxtBoxValNum())
             {
                 if($scope.num <= 1)
                     $scope.result = "Number should be greater than 1";
@@ -41,8 +41,8 @@
             var num = $scope.num;
             $scope.result = "";
             $scope.show = true;
-
-            if (!isNaN(num) && angular.isNumber(+num))
+           
+            if (isTxtBoxValNum())
             {
                 for (var i = +num + 1; true; i++)
                 {
@@ -63,7 +63,7 @@
             $scope.result = "";
             $scope.show = true;
 
-            if (!isNaN(num) && angular.isNumber(+num))
+            if (isTxtBoxValNum())
             {
                 for (var i = num - 1; i > 1; i--)
                     if (isPrime(i))
@@ -88,6 +88,12 @@
             if (num <= 1)
                 return false;
             return true;
+        }
+
+        function isTxtBoxValNum()
+        {
+            var num = $scope.num;
+            return (!isNaN(num) && angular.isNumber(+num) && num != "");
         }
     }
 })();

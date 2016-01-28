@@ -1,0 +1,18 @@
+body {
+    background-image: url('../images/4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+    overflow:hidden;
+    font-family: Verdana;
+}
+
+.refreshCss{
+    position:absolute;
+    top: 125px;
+    right:0
+}
+
+.rowSpace {
+    top:12px
+}

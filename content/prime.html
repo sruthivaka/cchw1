@@ -1,30 +1,32 @@
-﻿<div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4">
-                <label for="txtBox">Enter a number:</label>
-                <input type="text" class="form-control" ng-model="num" id="txtBox">
-            </div>
-            <div class="col-md-4">
-                <label for="txtBox" ng-show="show">{{result}}</label>
-            </div>
-            <div class="col-md-4">
-                <button type="button" class="btn btn-primary" ng-click="clear()">Refresh</button>
-            </div>
+﻿<div class="container-fluid">    
+    <div class="row">
+        <div class="col-md-4">            
+        </div>
+        <div class="col-md-4">
+            <label for="txtBox">Enter a number:</label>
+            <input type="text" class="form-control" ng-model="num" id="txtBox" maxlength="15">
+            <label ng-show="show">{{result}}</label>
+        </div>
+        <div class="col-md-4 refreshCss">            
+            <button type="button" name="clrBtn" class="btn btn-primary" ng-click="clear()" >Refresh</button>
         </div>
     </div>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4">
-                <button type="button" class="btn btn-primary" ng-click="generatePrevious()">Previous</button>
-            </div>
-            <div class="col-md-4">
-                <button type="button" class="btn btn-primary" ng-click="checkPrime()">Check</button>
-            </div>
-            <div class="col-md-4">
-                <button type="button" class="btn btn-primary" ng-click="generateNext()">Next</button>
-            </div>
+    <div class="container-fluid"></div>
+    <div class="row">
+        <div class="col-md-4">            
+        </div>
+        <div class="col-md-4 rowSpace">
+            <div class="row">
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-primary pull-left" ng-click="generatePrevious()">Previous Prime</button>
+                </div>
+                <div class="col-md-4">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="button" class="btn btn-primary" ng-click="checkPrime()">Check</button>
+                </div>
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-primary pull-right" ng-click="generateNext()">Next Prime</button>
+                </div>
+            </div>                    
         </div>
     </div>
 </div>
